@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>svg绘制图形</title>
+</head>
+<body>
+  <svg width="1000" height="600">
+    <!-- 绘制矩形 -->
+    <rect x="40" y="40" width="300" height="200" style="fill:orangered; stroke: pink; stroke-width: 4"></rect> 
+
+    <!-- 绘制圆角矩形  增加rx， yx -->
+    <rect x="40" y="40" width="300" rx="20" yx="20"  height="200" style="fill:orangered; stroke: pink; stroke-width: 4"></rect> 
+    
+    <!-- 绘制圆形 x轴是cx,y轴是cy, r是半径 -->
+    <circle cx="200" cy="200" r="100" style="fill: darkblue"></circle>
+
+    <!-- 椭圆 rx是x轴半径，ry是y轴半径-->
+    <ellipse cx="200" cy="200" rx="80" ry="40" style="fill: seagreen"></ellipse>
+    
+    <!-- 绘制线条 x1是起点x轴，x2是终点坐标-->
+    <line x1="100" y1="40" x2="500" y2="60" style="stroke:#333; stroke-width: 4"></line>
+    
+    <!-- 绘制  多边形 points点，例如从200到40 第一条线从哪里到哪里  transform设置偏移位置-->
+    <polygon points="200, 40, 400, 50, 100, 5, 100, 50" style="fill: lightblue; stroke-width: 2; stroke: red"
+      transform="translate(100, 100)"></polygon>
+
+    <!-- 绘制文字 -->
+    <text x="200" y="200" style="fill: orange; font-size: 40" textLength="200">学习</text>
+  </svg>
+</body>
+</html>
